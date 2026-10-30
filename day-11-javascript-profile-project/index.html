@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="profile-header">
+        <h1 id="profileName">Tehreem Ijaz</h1>
+        <p id="profileRole">Software Developer</p>
+    </header>
+
+    <main class="container">
+
+        <section class="profile-card">
+            <h2>About Me</h2>
+            <p id="profileExperience"></p>
+            <p id="profileContact"></p>
+        </section>
+
+        <section class="profile-card">
+            <h2>My Skills</h2>
+
+            <input
+                type="text"
+                id="skillSearch"
+                placeholder="Search your skills..."
+            >
+
+            <div id="skillsList" class="skills-list"></div>
+
+            <p id="skillMessage"></p>
+            <h3 id="skillScore"></h3>
+        </section>
+
+        <section class="profile-card">
+            <h2>Education</h2>
+            <ul id="educationList"></ul>
+        </section>
+
+        <section class="profile-card">
+            <h2>My Projects</h2>
+            <div id="projectsList"></div>
+        </section>
+
+        <section class="profile-card">
+            <h2>Achievements</h2>
+            <ul id="achievementsList"></ul>
+        </section>
+
+        <section class="profile-card">
+            <h2>Profile Message</h2>
+            <p id="profileMessage"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 My Personal Profile</p>
+    </footer>
+
+</body>
+</html>
