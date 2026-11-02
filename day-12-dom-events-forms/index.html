@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Registration</h1>
+            <p>Create your account by filling out the form.</p>
+        </header>
+
+        <form id="registrationForm" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="03001234567"
+                    pattern="[0-9]{11}" required>
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password"
+                    placeholder="Create password" minlength="8" required>
+                <small class="error"></small>
+                <div id="strength"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                    placeholder="Confirm password" required>
+                <small class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="about">About Yourself</label>
+                <textarea id="about" maxlength="200"
+                    placeholder="Write something about yourself"></textarea>
+                <div class="counter">
+                    <span id="charCount">0</span>/200 characters
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Select Your Skills</label>
+
+                <div class="skills">
+                    <label>
+                        <input type="checkbox" name="skills" value="HTML">
+                        HTML
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="CSS">
+                        CSS
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="JavaScript">
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="Python">
+                        Python
+                    </label>
+                </div>
+
+                <div id="selectedSkills"></div>
+            </div>
+
+            <div class="tabs">
+                <button type="button" class="tab active"
+                    data-tab="personal">Personal Info</button>
+
+                <button type="button" class="tab"
+                    data-tab="additional">Additional Info</button>
+            </div>
+
+            <div id="personal" class="tab-content active">
+                <h3>Personal Information</h3>
+                <p>Please provide your correct contact details.</p>
+            </div>
+
+            <div id="additional" class="tab-content">
+                <h3>Additional Information</h3>
+
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <select id="education">
+                        <option value="">Select Education</option>
+                        <option value="Matric">Matric</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Bachelor">Bachelor</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" id="submitBtn" disabled>
+                    Register
+                </button>
+
+                <button type="reset" id="resetBtn">
+                    Reset
+                </button>
+            </div>
+
+            <p id="successMessage" role="status" aria-live="polite"></p>
+
+        </form>
+
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h2>Confirm Registration</h2>
+            <p>Are you sure you want to submit your information?</p>
+
+            <button type="button" id="confirmBtn">Yes, Submit</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>
